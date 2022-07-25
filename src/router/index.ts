@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { useUserInfo } from '@/store/modules/userInfo'
 
 // https://router.vuejs.org/guide/
 
@@ -9,7 +10,7 @@ const routes: RouteRecordRaw[] = [
     name: 'login',
     component: () => import('@/views/login/index.vue'),
     meta: {
-      requiresAuth: false,
+      permission: false,
       title: '登录页',
       key: 'login'
     }
@@ -34,7 +35,7 @@ const routes: RouteRecordRaw[] = [
     name: '404',
     component: () => import('@/views/error/404.vue'),
     meta: {
-      requiresAuth: false,
+      permission: false,
       title: '404',
       key: '404'
     }
@@ -54,17 +55,22 @@ const router = createRouter({
   }
 })
 
-// router.beforeEach((to, from, next) => {
-//   document.title = `${to.meta.title} | Naruto `
-//   const role = localStorage.getItem('ms_username')
-//   if (!role && to.path !== '/login') {
-//     next('/login')
-//   } else if (to.meta.permission) {
-//     // 如果是管理员权限则可进入，这里只是简单的模拟管理员权限而已
-//     role === 'admin' ? next() : next('/403')
-//   } else {
-//     next()
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title} | Naruto `
+  // * 判断当前路由是否需要访问权限
+  if (!to.matched.some(record => record.meta.permission)) return next()
+  // * 判断是否有Token
+  const userInfo = useUserInfo()
+  const token = userInfo.token
+
+  if (!token && to.path !== '/login') {
+    next('/login')
+  } else if (to.meta.permission) {
+    // todo 权限设置
+    userInfo.userInfo.name === 'admin' ? next() : next('/403')
+  } else {
+    next()
+  }
+})
 
 export default router

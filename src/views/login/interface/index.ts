@@ -1,6 +1,6 @@
 export namespace Login {
   export interface ReqLoginForm {
-    username: string
+    name: string
     password: string
   }
   export interface ResLogin {

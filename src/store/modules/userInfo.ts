@@ -15,18 +15,18 @@ export const useUserInfo = defineStore('userInfos', {
   },
   actions: {
     // setToken
-    async setToken(token: string) {
-      this.token = token
+    async setToken(token: string | undefined) {
+      this.token = token || ''
     },
     // setUserInfo
     async setUserInfo(userInfo: any) {
       this.userInfo = userInfo
     },
-    async setLastWorkspaceId(workspaceId: string) {
-      this.lastWorkspaceId = workspaceId
+    async setLastWorkspaceId(workspaceId: string | undefined) {
+      this.lastWorkspaceId = workspaceId || ''
     },
-    async setLastProjectId(projectId: string) {
-      this.lastProjectId = projectId
+    async setLastProjectId(projectId: string | undefined) {
+      this.lastProjectId = projectId || ''
     }
   },
   persist: piniaPersistConfig('userInfos', true)

@@ -17,10 +17,11 @@ export default defineConfig(({ command, mode }) => {
     server: {
       host: '0.0.0.0',
       port: env.VITE_PORT as unknown as number,
-      cors: true,
+      // cors: true,
       proxy: {
         '/api': {
           target: 'http://localhost:8080',
+          ws: true,
           changeOrigin: true,
           rewrite: path => path.replace(/^\/api/, '')
         }

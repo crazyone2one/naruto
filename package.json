@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.6",
+    "axios": "^0.27.2",
     "element-plus": "^2.2.10",
+    "js-md5": "^0.7.3",
     "pinia": "^2.0.16",
     "pinia-plugin-persistedstate": "^1.6.3",
     "vue": "^3.2.37",
