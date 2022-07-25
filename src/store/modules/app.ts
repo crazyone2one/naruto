@@ -15,7 +15,8 @@ export const useApp = defineStore('appStore', {
         // 面包屑导航
         breadcrumb: false,
         // 标签页
-        tabs: false
+        tabs: false,
+        isCollapse: true
         // for data that is not yet loaded
         //   user: null as UserInfo | null,
       }
@@ -33,6 +34,9 @@ export const useApp = defineStore('appStore', {
     // setThemeConfig
     setThemeConfig(themeConfig: ThemeConfigProp) {
       this.themeConfig = themeConfig
+    },
+    setCollapse() {
+      this.themeConfig.isCollapse = !this.themeConfig.isCollapse
     }
   },
   persist: piniaPersistConfig('appStore', false)

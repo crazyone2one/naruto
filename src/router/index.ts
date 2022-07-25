@@ -5,9 +5,19 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw[] = [
   { path: '/', redirect: '/dashboard' },
   {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login/index.vue'),
+    meta: {
+      requiresAuth: false,
+      title: '登录页',
+      key: 'login'
+    }
+  },
+  {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/index.vue'),
+    component: () => import('@/components/layout/index.vue'),
     children: [
       {
         path: '/dashboard',

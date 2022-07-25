@@ -3,6 +3,7 @@ export interface ThemeConfigProp {
   primary: string
   breadcrumb: boolean
   tabs: boolean
+  isCollapse: boolean
 }
 
 /* GlobalState */

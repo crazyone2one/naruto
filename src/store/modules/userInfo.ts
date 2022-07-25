@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import piniaPersistConfig from '../../config/piniaPersistConfig'
 import { userInfos } from '../interface'
 
-export const useApp = defineStore('userInfos', {
+export const useUserInfo = defineStore('userInfos', {
   // other options...
   state: (): userInfos => {
     return {
