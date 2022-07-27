@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import CollapseIcon from './components/CollapseIcon.vue'
 import AvatarUser from './components/AvatarUser.vue'
+import HeaderWorkspace from './components/HeaderWorkspace.vue'
 </script>
 <template>
   <div class="header">
@@ -8,6 +9,7 @@ import AvatarUser from './components/AvatarUser.vue'
       <CollapseIcon />
     </div>
     <div class="header-ri flx-center">
+      <header-workspace />
       <!-- <span class="username">NARUTO</span> -->
       <avatar-user />
     </div>

@@ -32,18 +32,35 @@ listeningWindow()
       :collapse-transition="false"
       :unique-opened="true"
       :collapse="isCollapse"
+      router
     >
-      <el-menu-item index="2">
+      <el-menu-item index="/workstation" disabled>
         <el-icon><icon-menu /></el-icon>
-        <template #title>Navigator Two</template>
+        <template #title>{{ $t('commons.my_workstation') }}</template>
       </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <el-icon><document /></el-icon>
-        <template #title>Navigator Three</template>
+      <el-menu-item index="/track" disabled>
+        <el-icon><hot-water /></el-icon>
+        <template #title>{{ $t('test_track.test_track') }}</template>
       </el-menu-item>
-      <el-menu-item index="4">
+      <el-menu-item index="/api" disabled>
+        <el-icon><list /></el-icon>
+        <template #title>{{ $t('commons.api') }}</template>
+      </el-menu-item>
+      <el-menu-item index="/ui" disabled>
+        <el-icon><list /></el-icon>
+        <template #title>{{ $t('commons.ui') }}</template>
+      </el-menu-item>
+      <el-menu-item index="/report" disabled>
+        <el-icon><monitor /></el-icon>
+        <template #title>{{ $t('commons.report_statistics.title') }}</template>
+      </el-menu-item>
+      <el-menu-item index="/project" disabled>
         <el-icon><setting /></el-icon>
-        <template #title>Navigator Four</template>
+        <template #title>{{ $t('commons.project_setting') }}</template>
+      </el-menu-item>
+      <el-menu-item index="/setting">
+        <el-icon><setting /></el-icon>
+        <template #title>{{ $t('commons.system_setting') }}</template>
       </el-menu-item>
     </el-menu>
   </div>

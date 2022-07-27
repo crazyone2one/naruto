@@ -7,16 +7,18 @@ export interface Result {
 
 // * 请求响应参数(包含data)
 export interface ResultData<T = any> extends Result {
-  data?: T
+  data: T
 }
+
 // * 分页请求参数
 export interface ReqPage {
-  pageNum: number
-  pageSize: number
+  page: number
+  limit: number
 }
+
 // * 用户管理
 export namespace User {
-  export interface ReqGetUserParams extends ReqPage {
+  export interface ReqGetParams extends ReqPage {
     name: string
   }
   export interface ResUser {
@@ -41,6 +43,32 @@ export namespace User {
     groups: any
   }
 }
+
+// * Workspace管理
+export namespace Workspace {
+  export interface ReqGetParams extends ReqPage {
+    name: string
+  }
+  export interface ReqMemberListParams {
+    name?: string
+    workspaceId?: string
+    projectId?: string
+  }
+  export interface WorkspaceItem {
+    id: string
+    name: string
+    description: string
+    createTime: string
+    updateTime: string
+    createUser: string
+    memberSize: number
+  }
+  export interface ResWorkspace {
+    total: number
+    records: WorkspaceItem[]
+  }
+}
+
 // * 登录
 export namespace Login {
   export interface ReqLoginForm {

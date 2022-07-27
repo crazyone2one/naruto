@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import { useUserInfo } from '@/store/modules/userInfo'
+import setting from './modules/setting'
+import i18n from '@/i18n'
 
 // https://router.vuejs.org/guide/
 
@@ -11,7 +13,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/login/index.vue'),
     meta: {
       permission: false,
-      title: '登录页',
+      title: 'commons.login',
       key: 'login'
     }
   },
@@ -24,12 +26,14 @@ const routes: RouteRecordRaw[] = [
         path: '/dashboard',
         name: 'dashboard',
         meta: {
-          title: '系统首页'
+          title: 'workstation.dash_board',
+          permission: true
         },
         component: () => import(/* webpackChunkName: "dashboard" */ '@/views/home/index.vue')
       }
     ]
   },
+  setting,
   {
     path: '/404',
     name: '404',
@@ -56,18 +60,16 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = `${to.meta.title} | Naruto `
+  const _title: string = to.meta.title ? (to.meta.title as string) : ''
+  document.title = `${i18n.global.t(_title)} | Naruto `
   // * 判断当前路由是否需要访问权限
   if (!to.matched.some(record => record.meta.permission)) return next()
   // * 判断是否有Token
   const userInfo = useUserInfo()
-  const token = userInfo.token
-
-  if (!token && to.path !== '/login') {
-    next('/login')
-  } else if (to.meta.permission) {
-    // todo 权限设置
-    userInfo.userInfo.name === 'admin' ? next() : next('/403')
+  if (!userInfo.token) {
+    next({
+      path: '/login'
+    })
   } else {
     next()
   }

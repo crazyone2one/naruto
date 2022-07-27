@@ -7,6 +7,7 @@ import pinia from '@/store/index'
 import i18n from '@/i18n/index'
 import router from './router'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import '@/styles/index.scss'
 
 const app = createApp(App)
 

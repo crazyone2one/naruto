@@ -4,6 +4,7 @@ import router from '@/router'
 import { ElMessage } from 'element-plus'
 import { checkStatus } from './checkStatus'
 import { ResultData } from '@/api/interface'
+import { getCurrentWorkspaceId, getCurrentProjectId } from '@/utils/common'
 
 const userInfo = useUserInfo()
 const config = {
@@ -34,7 +35,15 @@ class RequestHttp {
         // config.headers!.noLoading || showFullScreenLoading()
         const token: string | null = userInfo.token
         // return { ...config, headers: { ...config.headers, 'x-access-token': token } }
-        return { ...config, headers: { ...config.headers, Authorization: token } }
+        return {
+          ...config,
+          headers: {
+            ...config.headers,
+            Authorization: token,
+            WORKSPACE: getCurrentWorkspaceId(),
+            PROJECT: getCurrentProjectId()
+          }
+        }
       },
       (error: AxiosError) => {
         return Promise.reject(error)
