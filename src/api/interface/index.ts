@@ -69,6 +69,42 @@ export namespace Workspace {
   }
 }
 
+// * Workspace管理
+export namespace Project {
+  export interface ReqGetParams extends ReqPage {
+    name: string
+  }
+
+  export interface ProjectItem {
+    id: string
+    projectId: any
+    workspaceId: string
+    name: string
+    description: string
+    createTime: string
+    updateTime: string
+    tapdId: any
+    jiraKey: any
+    zentaoId: any
+    azureDevopsId: any
+    caseTemplateId: any
+    issueTemplateId: string
+    createUser: any
+    systemId: any
+    azureFilterId: any
+    platform: string
+    thirdPartTemplate: boolean
+    versionEnable: any
+    issueConfig: any
+    userId: any
+    memberSize: number
+  }
+  export interface ResProject {
+    total: number
+    records: ProjectItem[]
+  }
+}
+
 // * 登录
 export namespace Login {
   export interface ReqLoginForm {
