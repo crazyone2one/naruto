@@ -54,7 +54,7 @@ listeningWindow()
         <el-icon><monitor /></el-icon>
         <template #title>{{ $t('commons.report_statistics.title') }}</template>
       </el-menu-item>
-      <el-menu-item index="/project" disabled>
+      <el-menu-item index="/project">
         <el-icon><setting /></el-icon>
         <template #title>{{ $t('commons.project_setting') }}</template>
       </el-menu-item>

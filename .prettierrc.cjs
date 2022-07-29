@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 100,
+  printWidth: 120,
   singleQuote: true,
   semi: false,
   // 更改引用对象属性的时间 可选值"<as-needed|consistent|preserve>"

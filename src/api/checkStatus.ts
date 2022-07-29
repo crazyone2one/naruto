@@ -25,6 +25,9 @@ export const checkStatus = (status: number): void => {
     case 408:
       ElMessage.error('请求超时！请您稍后重试')
       break
+    case 422:
+      ElMessage.error('用户名/密码不正确')
+      break
     case 500:
       ElMessage.error('服务异常！')
       break

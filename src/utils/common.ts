@@ -1,4 +1,5 @@
 import { useUserInfo } from '@/store/modules/userInfo'
+import i18n from '@/i18n'
 
 export function getUUID() {
   function S4() {
@@ -20,4 +21,15 @@ export function getCurrentProjectId() {
 export function getCurrentUserId() {
   const userInfo = useUserInfo()
   return userInfo.userInfo.id
+}
+
+export function getTranslateOptions(data: any) {
+  const options: { text: string }[] = []
+  data.forEach((element: any) => {
+    const option = { text: '' }
+    Object.assign(option, element)
+    option.text = i18n.global.t(option.text)
+    options.push(option)
+  })
+  return options
 }

@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import { useUserInfo } from '@/store/modules/userInfo'
 import setting from './modules/setting'
+import project from './modules/project'
 import i18n from '@/i18n'
 
 // https://router.vuejs.org/guide/
@@ -34,6 +35,7 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   setting,
+  project,
   {
     path: '/404',
     name: '404',

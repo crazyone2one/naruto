@@ -104,7 +104,31 @@ export namespace Project {
     records: ProjectItem[]
   }
 }
+export namespace CustomField {
+  export interface ReqGetParams extends ReqPage {
+    name: string
+    projectId?: string
+  }
 
+  export interface CustomField {
+    id: string
+    name: string
+    scene: string
+    type: string
+    remark: string
+    options: string
+    system: boolean
+    global: boolean
+    createTime: any
+    updateTime: any
+    createUser: any
+    projectId: string
+  }
+  export interface ResCustomField {
+    total: number
+    records: CustomField[]
+  }
+}
 // * 登录
 export namespace Login {
   export interface ReqLoginForm {
