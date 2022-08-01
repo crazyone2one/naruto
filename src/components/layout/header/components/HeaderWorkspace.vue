@@ -22,7 +22,7 @@ const handleClick = (workspace: Workspace.WorkspaceItem) => {
     return false
   }
   switchWorkspace(workspaceId).then(res => {
-    userInfo.setToken(res.data?.token)
+    // userInfo.setToken(res.data?.token)
     userInfo.setLastProjectId(res.data?.lastProjectId)
     userInfo.setLastWorkspaceId(res.data?.lastWorkspaceId)
     userInfo.setUserInfo(res.data)
