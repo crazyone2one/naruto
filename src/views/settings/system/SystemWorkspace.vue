@@ -3,12 +3,7 @@ import { computed, reactive, ref, onMounted } from 'vue'
 import i18n from '@/i18n'
 import { ElMessage, ElMessageBox, FormInstance } from 'element-plus'
 import NTableOperator from '@/components/common/NTableOperator.vue'
-import {
-  deleteWsById,
-  getMemberList,
-  saveWorkspace,
-  workspacePageList
-} from '@/api/modules/workspace'
+import { deleteWsById, getMemberList, saveWorkspace, workspacePageList } from '@/api/modules/workspace'
 import { Workspace } from '@/api/interface'
 import { getCurrentUserId, getCurrentWorkspaceId } from '@/utils/common'
 import NDialogFooter from '@/components/common/NDialogFooter.vue'
@@ -44,9 +39,7 @@ const state = reactive({
         trigger: 'blur'
       }
     ],
-    description: [
-      { max: 50, message: i18n.global.t('commons.input_limit', [0, 50]), trigger: 'blur' }
-    ]
+    description: [{ max: 50, message: i18n.global.t('commons.input_limit', [0, 50]), trigger: 'blur' }]
   }
   // title: i18n.global.t('workspace.create')
 })
@@ -217,10 +210,7 @@ onMounted(() => {
       </el-form>
       <template #footer>
         <span class="dialog-footer">
-          <n-dialog-footer
-            @cancel="resetForm(editWorkspaceFromRef)"
-            @confirm="submitForm(editWorkspaceFromRef)"
-          />
+          <n-dialog-footer @cancel="resetForm(editWorkspaceFromRef)" @confirm="submitForm(editWorkspaceFromRef)" />
         </span>
       </template>
     </el-dialog>

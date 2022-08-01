@@ -36,15 +36,6 @@ const exec = () => {
       </div>
     </el-button>
   </el-tooltip>
-  <n-tip-buttom
-    v-else
-    :disabled="disabled"
-    :type="type"
-    :tip="tip"
-    :icon="icon"
-    size="small"
-    circle
-    @click="exec"
-  />
+  <n-tip-buttom v-else :disabled="disabled" :type="type" :tip="tip" :icon="icon" size="small" circle @click="exec" />
 </template>
 <style scoped lang="scss"></style>

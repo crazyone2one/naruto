@@ -24,12 +24,8 @@ const state = reactive({
     groups: [] as any
   },
   rules: {
-    userIds: [
-      { required: true, message: i18n.global.t('member.please_choose_member'), trigger: ['blur'] }
-    ],
-    groupIds: [
-      { required: true, message: i18n.global.t('group.please_select_group'), trigger: ['blur'] }
-    ]
+    userIds: [{ required: true, message: i18n.global.t('member.please_choose_member'), trigger: ['blur'] }],
+    groupIds: [{ required: true, message: i18n.global.t('group.please_select_group'), trigger: ['blur'] }]
   },
   userList: [] as User.ResUser[],
   copyUserList: [],
@@ -89,12 +85,7 @@ defineExpose({ openDialog })
             :placeholder="$t('member.please_choose_member')"
             class="member_select"
           >
-            <el-option
-              v-for="item in state.userList"
-              :key="item.id"
-              :label="item.id"
-              :value="item.id"
-            >
+            <el-option v-for="item in state.userList" :key="item.id" :label="item.id" :value="item.id">
               <user-option-item :user="item" />
             </el-option>
           </el-select>
@@ -106,12 +97,7 @@ defineExpose({ openDialog })
             :placeholder="$t('group.please_select_group')"
             class="group_select"
           >
-            <el-option
-              v-for="item in state.form.groups"
-              :key="item.id"
-              :label="item.name"
-              :value="item.id"
-            />
+            <el-option v-for="item in state.form.groups" :key="item.id" :label="item.name" :value="item.id" />
           </el-select>
         </el-form-item>
       </el-form>

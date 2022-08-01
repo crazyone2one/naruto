@@ -48,11 +48,7 @@ const calHeight = computed(() => {
   return props.height ? props.height + 'px' : props.enableAutoHeight ? null : 'calc(100vh-50px)'
 })
 const containerCalHeight = computed(() => {
-  return props.height
-    ? props.height - 30 + 'px'
-    : props.enableAutoHeight
-    ? null
-    : 'calc(100vh-50px)'
+  return props.height ? props.height - 30 + 'px' : props.enableAutoHeight ? null : 'calc(100vh-50px)'
 })
 </script>
 <template>
@@ -75,11 +71,7 @@ const containerCalHeight = computed(() => {
       <el-icon v-if="!state.asideHidden"><ArrowLeft /></el-icon>
       <el-icon v-if="state.asideHidden"><ArrowRight /></el-icon>
     </div>
-    <div
-      style="overflow: scroll"
-      class="ms-aside-node-tree"
-      :style="{ height: containerCalHeight } as any"
-    >
+    <div style="overflow: scroll" class="ms-aside-node-tree" :style="{ height: containerCalHeight } as any">
       <slot></slot>
     </div>
   </el-aside>

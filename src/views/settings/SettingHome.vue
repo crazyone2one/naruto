@@ -13,9 +13,7 @@ const statistic = ref({
         <el-card style="height: 100%; width: 100%">
           <template #header>
             <div class="card-header" style="padding: 5px 0">
-              <span style="font-size: 18px; font-weight: bold">{{
-                $t('commons.system_data')
-              }}</span>
+              <span style="font-size: 18px; font-weight: bold">{{ $t('commons.system_data') }}</span>
             </div>
           </template>
           <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">

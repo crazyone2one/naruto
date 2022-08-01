@@ -458,8 +458,7 @@ export default {
     sync_other_info: 'Copy other config',
     delete_current_version: 'Current version',
     delete_all_version: 'All versions',
-    change_password_tips:
-      'Your password is the initial system password, please change it as soon as possible',
+    change_password_tips: 'Your password is the initial system password, please change it as soon as possible',
     ui: 'UI TEST',
     not_eligible_for_deletion: 'Not Eligible For Deletion',
     batch: 'Batch',
@@ -643,8 +642,7 @@ export default {
       please_select_env_for_current_plan: 'please select env for current plan',
       please_select_run_within_resource_pool: 'Please select a resource pool',
       lack_env: 'Environment group is missing environment！',
-      lack_necessary_environment:
-        'This environment group lacks the necessary project environment！',
+      lack_necessary_environment: 'This environment group lacks the necessary project environment！',
       available_group: 'available',
       not_available_group: 'unavailable'
     }
@@ -686,8 +684,7 @@ export default {
         '2. For robots that need security verification, you can choose "custom keyword" verification, and the keyword is "Message Notification";<br/>' +
         '3. To use the @ feature, the selected recipient must be a user included in the group, the recipient’s phone number is required and should be the phone number used by Dingding.',
       message: 'Event, receiver and receiving method are required\n',
-      message_webhook:
-        'Webhook is required when the receiving mode is WeChat Enterprise, Dingding or Feishu',
+      message_webhook: 'Webhook is required when the receiving mode is WeChat Enterprise, Dingding or Feishu',
       template: 'Template',
       track: 'Track notification',
       api: 'Api notification',
@@ -720,8 +717,7 @@ export default {
       zentao_password: 'Zentao Password',
       zentao_prompt_information:
         'This information is the username and password of the user who submitted the defect through ZenTao. If not filled in, the default information configured in the workspace will be used',
-      zentao_config_tip:
-        'Refer to the value of $config->requestType in the ZenTao configuration file',
+      zentao_config_tip: 'Refer to the value of $config->requestType in the ZenTao configuration file',
       zentao_config_path: 'Configuration file reference path: /opt/zbox/app/zentao/config/my.php',
       use_tip: 'Usage guidelines:',
       use_tip_tapd:
@@ -752,8 +748,7 @@ export default {
       input_azure_pat: 'Please enter Personal Access Token',
       input_azure_url: 'Please enter Azure Devops Url',
       input_azure_id: 'Please enter Azure Organization ID',
-      use_tip_azure:
-        'Azure Devops URL+PersonalAccessTokens(User Settings-Personal Access Tokens-New Token)',
+      use_tip_azure: 'Azure Devops URL+PersonalAccessTokens(User Settings-Personal Access Tokens-New Token)',
       jira_prompt_information:
         'This information is the user authentication information for submitting defects through Jira. If it is not filled in, the default information configured in the workspace will be used'
     }
@@ -790,8 +785,7 @@ export default {
     no_data: 'No Data',
     select: 'Select',
     repeatable: 'API URL Repeatable',
-    repeatable_info:
-      'After enabling, the interface definition repeatability check will not check the URL',
+    repeatable_info: 'After enabling, the interface definition repeatability check will not check the URL',
     case_public: 'Public Library',
     public: 'Start Public Library',
     public_info: 'You can add test cases to the public test case library by yourself',
@@ -858,8 +852,7 @@ export default {
       enable: 'Enable version management',
       latest: 'Latest',
       set_latest: 'Latest',
-      delete_tip:
-        'This version has associated system resources, this operation will delete the associated resources',
+      delete_tip: 'This version has associated system resources, this operation will delete the associated resources',
       checkout: 'Checkout',
       compare: 'Compare',
       change_latest_tip:
@@ -981,8 +974,7 @@ export default {
     report_sharing_link: 'Report Sharing Link',
     recent: 'My recent Report',
     search_by_name: 'Search by Name',
-    batch_add_monitor_tips:
-      'Format: name, IP, Port, description<br/>such as: item 1, 192.168.1.52, 9100, test',
+    batch_add_monitor_tips: 'Format: name, IP, Port, description<br/>such as: item 1, 192.168.1.52, 9100, test',
     test_name: 'Test',
     test_overview: 'Test Overview',
     test_request_statistics: 'Test Request Statistics',
@@ -1017,8 +1009,7 @@ export default {
     project_name: 'Project Name',
     force_stop_tips:
       '<strong>Terminating</strong> the servers will immediately kill the servers and the JTL files will be lost.',
-    stop_tips:
-      'A <strong>Graceful shutdown</strong> will archive the JTL files and then stop the servers.',
+    stop_tips: 'A <strong>Graceful shutdown</strong> will archive the JTL files and then stop the servers.',
     force_stop_btn: 'Terminating',
     stop_btn: 'Graceful shutdown',
     stop_btn_all: 'All Graceful shutdown ',
@@ -1200,10 +1191,8 @@ export default {
     copy: 'Copy Test',
     please_select_case: 'Please select case',
     fail_to_stop: 'Fail to stop',
-    batch_add_parameter:
-      'Format: parameter name: parameter value <br/> like：Accept-Encoding:utf-8',
-    create_performance_test_tips:
-      'This operation cannot be completed without permission to create performance tests',
+    batch_add_parameter: 'Format: parameter name: parameter value <br/> like：Accept-Encoding:utf-8',
+    create_performance_test_tips: 'This operation cannot be completed without permission to create performance tests',
     jar_config: {
       title: 'Upload jar package',
       jar_file: 'Jar Package',
@@ -1291,8 +1280,7 @@ export default {
         case: 'Case',
         responsible: 'Executor',
         title: 'Create api',
-        path_info:
-          'Please enter the URL of the interface, such as /api/demo/#{id}, where id is the path parameter',
+        path_info: 'Please enter the URL of the interface, such as /api/demo/#{id}, where id is the path parameter',
         path_all_info: 'Please enter the complete test address',
         fast_debug: 'Fast debug',
         close_all_label: 'close all label',
@@ -1355,8 +1343,7 @@ export default {
         other_config: 'Other Config',
         cert_alias: 'Certificate Alias',
         message_template: 'Message Template',
-        tcp_parameter_tip:
-          'The request parameters can be referenced in the request template ${XXX}',
+        tcp_parameter_tip: 'The request parameters can be referenced in the request template ${XXX}',
         step_message: 'Too many steps, whether to expand the first 30 steps？',
         esb_table: {
           name: 'name',
@@ -1368,8 +1355,7 @@ export default {
           not_required: 'Not required'
         },
         esb_copy_confirm: 'Copy this node data struct',
-        esb_title:
-          'You can use ${name} or ${parent name.child name} to generate xml struct in report template'
+        esb_title: 'You can use ${name} or ${parent name.child name} to generate xml struct in report template'
       },
       document: {
         open: 'Open',
@@ -1406,8 +1392,7 @@ export default {
       case_reduction_error_text: 'Please restore first'
     },
     automation: {
-      open_check_message:
-        'There are too many steps to check, and a maximum of 20 first-level steps can be supported.',
+      open_check_message: 'There are too many steps to check, and a maximum of 20 first-level steps can be supported.',
       open_expansion: 'Batch Folding Steps',
       close_expansion: 'Bulk Expand Steps',
       bulk_activation_steps: 'Bulk activation steps',
@@ -1560,12 +1545,10 @@ export default {
       module_id: 'Scenario Module ID',
       level: 'Level',
       version: 'Scenario Version',
-      warning_context:
-        'It is not currently supported to add all scenarios to the test plan in batches!',
+      warning_context: 'It is not currently supported to add all scenarios to the test plan in batches!',
       jmx_file_set: 'Scenario JMX file set',
       error_report_jmx: 'Failed to export JMX file',
-      scenario_warning:
-        'No other steps can be added to the referenced scenario steps and sub-steps',
+      scenario_warning: 'No other steps can be added to the referenced scenario steps and sub-steps',
       scenario_step_warning: 'No other steps can be added under the current step',
       scenario_error: 'Cannot reference or copy itself！',
       integrated: 'Integrated',
@@ -1588,8 +1571,7 @@ export default {
       refer_to_environment: 'Use Environment',
       please_configure_socket_in_environment: 'Please Configure Path In The Environment',
       please_configure_environment_in_scenario: 'Please Configure Environment In The Scenario',
-      please_add_environment_to_scenario:
-        'Please Add The Environment Configuration To The Scenario First',
+      please_add_environment_to_scenario: 'Please Add The Environment Configuration To The Scenario First',
       url_description: 'etc: https://fit2cloud.com',
       path_description: 'etc：/login',
       parameters: 'Query parameters',
@@ -1606,8 +1588,7 @@ export default {
       parameters_advance_add_func_error: 'Please select function first',
       parameters_advance_add_mock_error: 'Please select mock data first',
       parameters_advance_add_param_error: 'Please enter function parameters',
-      parameters_desc:
-        'Parameters will be appended to the URL e.g. https://fit2cloud.com?Name=Value&Name2=Value2',
+      parameters_desc: 'Parameters will be appended to the URL e.g. https://fit2cloud.com?Name=Value&Name2=Value2',
       headers: 'Headers',
       body: 'Body',
       body_kv: 'Key Value',
@@ -1705,8 +1686,7 @@ export default {
         suggest_tip: 'Click the note to add the JSONPath assertion',
         regex_info:
           'Special characters "$ () * +. [] \\ ^ {} |" need to be escaped as "\\ "+"special characters", such as "\\$"',
-        xpath_info:
-          'Select the extraction method according to the content format of the request response',
+        xpath_info: 'Select the extraction method according to the content format of the request response',
         regular_match: 'Regular match',
         none: 'Do not verify []',
         value_eq: 'Value-equal to [value=]',
@@ -1858,8 +1838,7 @@ export default {
       no_cover_tip: 'No overlay mode',
       no_cover_tip_1: '1. The same interface that already exists in the system will not be changed',
       no_cover_tip_2: '2. Add interfaces that do not exist in the system',
-      no_cover_tip_scenario_1:
-        '1. The same Scenario that already exists in the system will not be changed',
+      no_cover_tip_scenario_1: '1. The same Scenario that already exists in the system will not be changed',
       no_cover_tip_scenario_2: '2. Add Scenario that do not exist in the system',
       import_version: 'Import version',
       data_update_version: 'Api update version',
@@ -2005,8 +1984,7 @@ export default {
       execution_order: 'Order',
       associated_scene_results: 'Associated scene results',
       execute_before_step: 'Execute before single',
-      execute_before_step_tip:
-        'Execute every time before each API step, such as request encryption',
+      execute_before_step_tip: 'Execute every time before each API step, such as request encryption',
       execute_post_step: 'Execute after single',
       execute_post_step_tip: 'Execute every time after each API step, such as response decryption',
       execute_before_all_steps: 'Execute before all',
@@ -2124,8 +2102,7 @@ export default {
       step_info: 'Step Info',
       other_info: 'Other Info',
       step_describe: 'Step Describe',
-      step_describe_tip:
-        'Applicable to every step of the test scenario, there are clear test steps, expected results',
+      step_describe_tip: 'Applicable to every step of the test scenario, there are clear test steps, expected results',
       text_describe: 'Text Describe',
       text_describe_tip: 'For simple test scenarios, there are no clear test steps',
       change_type: 'Change Type',
@@ -2136,8 +2113,7 @@ export default {
       minder_tem_node_tip: 'Cannot create case {0} under the temporary node',
       minder_is_module_tip: '{0} is a module and cannot be modified as a use ca',
       minder_not_module_tip: 'Module {0}, cannot be created under a non-module node',
-      minder_all_module_tip:
-        'All case are virtual modules. Please create use cases in other modules',
+      minder_all_module_tip: 'All case are virtual modules. Please create use cases in other modules',
       minder_save_confirm_title: 'Please save the minder',
       minder_save_confirm_tip: 'The minder is not saved. Are you sure to save?',
       minder_import_save_confirm_tip:
@@ -2187,8 +2163,7 @@ export default {
       demand_name_id: 'Demand ID/Name',
       please_select_relate_test: 'Please select the test to associate',
       relate_test_not_find: 'The associated test does not exist, please check the test case',
-      other_relate_test_not_find:
-        'Associated test name, please go to the third party platform to execute',
+      other_relate_test_not_find: 'Associated test name, please go to the third party platform to execute',
       batch_handle: 'Batch processing (select {0} items)',
       batch_update: 'Update the attributes of {0} cases',
       select_catalog: 'Please select use case catalog',
@@ -2216,8 +2191,7 @@ export default {
         'Disassociating the project will also cancel the associated test cases under the project',
       img_loading_fail: 'Image failed to load',
       pdf_loading_fail: 'PDF loading failed',
-      upload_tip:
-        'Only jpg, jpeg, png, docx, doc, pdf, xlsx, txt, json, jmx, side files can be uploaded',
+      upload_tip: 'Only jpg, jpeg, png, docx, doc, pdf, xlsx, txt, json, jmx, side files can be uploaded',
       attachment: 'Attachment',
       upload_time: 'Upload Time',
       total: 'Total Case',
@@ -2247,8 +2221,7 @@ export default {
         continue_upload: 'Upload continue',
         import_create: 'Import Create',
         import_update: 'Import Update',
-        import_tip1:
-          'The ID is required when the "Test Case Custom ID" switch is turned on in the project settings',
+        import_tip1: 'The ID is required when the "Test Case Custom ID" switch is turned on in the project settings',
         import_tip2: 'ID is required when importing and updating',
         import_file_tips: 'Please upload the file first!'
       },
@@ -2267,8 +2240,7 @@ export default {
       plan_name: 'Name',
       plan_project: 'Project',
       related_project: 'Related Project',
-      related_tip:
-        'After linking the project, you can add test cases under the linking project to the test plan list',
+      related_tip: 'After linking the project, you can add test cases under the linking project to the test plan list',
       plan_stage: 'Stage',
       follow_people: 'Follow',
       plan_status: 'Status',
@@ -2294,8 +2266,7 @@ export default {
       planned_end_time: 'End Time',
       actual_start_time: 'Actual Start Time',
       actual_end_time: 'Actual End Time',
-      plan_delete_confirm:
-        'All use cases under this plan will be deleted,confirm delete test plan: ',
+      plan_delete_confirm: 'All use cases under this plan will be deleted,confirm delete test plan: ',
       plan_delete_tip: 'The test plan is under way, please confirm and delete it!',
       plan_delete: 'Delete test plan',
       api_case: 'Api case',
@@ -2313,12 +2284,10 @@ export default {
       data_name: 'Data Name',
       test_plan_batch_switch: 'batch on/off scheduled tasks',
       batch_update_schedule_enable: 'update the scheduled task status of {0} test plans',
-      batch_update_schedule_enable_alert:
-        'note: only test plans with scheduled tasks can be updated',
+      batch_update_schedule_enable_alert: 'note: only test plans with scheduled tasks can be updated',
       next_run_time: 'next running time',
       schedule_enabled: 'enabled',
-      check_schedule_enabled:
-        'the data you checked has detected {0} scheduled tasks that can be modified',
+      check_schedule_enabled: 'the data you checked has detected {0} scheduled tasks that can be modified',
       no_check_schedule_enabled: 'the data you checked does not detect a scheduled task',
       load_case: {
         case: 'Load Case',
@@ -2488,8 +2457,7 @@ export default {
       performance_case_count: 'Performance Case Count',
       running: 'Running',
       please_choose_test_case: 'please select a test case！',
-      execute_tip:
-        'The step execution result contains a Failed result, and the use case cannot be marked as Passed!'
+      execute_tip: 'The step execution result contains a Failed result, and the use case cannot be marked as Passed!'
     },
     issue: {
       issue: 'Issue',
@@ -2621,8 +2589,7 @@ export default {
       'Format: IP, Port, Monitor, maximum concurrent number<br/>such as: 192.168.1.52,8082,9100,500',
     k8s_sa_tips: 'Permissions required to use the K8S resource pool',
     k8s_sa_download_tips: 'Download SA executable file',
-    k8s_deploy_type_tips:
-      'A DaemonSet or Deployment needs to be deployed to perform interface testing',
+    k8s_deploy_type_tips: 'A DaemonSet or Deployment needs to be deployed to perform interface testing',
     k8s_deploy_download_tips: 'Download the YAML executable file'
   },
   system_parameter_setting: {
@@ -2668,8 +2635,7 @@ export default {
     input_username: 'please enter user name',
     input_url_placeholder: 'Please enter the LDAP address (eg ldap://localhost:389)',
     input_ou_placeholder: 'Enter user OU (use | to separate each OU)',
-    input_filter_placeholder:
-      'Input filter [Possible options are cn or uid or sAMAccountName={0}, eg: (uid={0})]',
+    input_filter_placeholder: 'Input filter [Possible options are cn or uid or sAMAccountName={0}, eg: (uid={0})]',
     input_mapping_placeholder:
       'eg：{"username":"uid","name":"sn","email":"mail"}, The username mapping option may be cn or uid or sAMAccountName',
     test_connect: 'Test Connection',
@@ -2821,8 +2787,7 @@ export default {
   },
   variables: {
     ƒ: 'Only CSV files can be uploaded',
-    csv_message:
-      '500 items are displayed by default, and the complete content can be downloaded and viewed.',
+    csv_message: '500 items are displayed by default, and the complete content can be downloaded and viewed.',
     end: 'end',
     start: 'start',
     increment: 'increment',
@@ -2834,8 +2799,7 @@ export default {
     quoted_data: 'Whether to allow quotes'
   },
   auth_source: {
-    delete_prompt:
-      'This operation will delete the authentication source, do you want to continue? ',
+    delete_prompt: 'This operation will delete the authentication source, do you want to continue? ',
     title: 'Auth Source',
     auth_name_valid: 'Name does not support special characters'
   },
@@ -2858,8 +2822,7 @@ export default {
     report_name: 'Report name',
     run_with_resource_pool: 'Run Within Resource pool',
     retry_on_failure: 'retry on failure',
-    retry_message:
-      'Retry the interface/UI use case, if it still fails after retries n times, the use case failed',
+    retry_message: 'Retry the interface/UI use case, if it still fails after retries n times, the use case failed',
     retry: 'Retry',
     retry_frequency: 'Frequency'
   },
@@ -3325,8 +3288,7 @@ export default {
     assertion: 'Error code assertion',
     tips: 'Tips: Use error report in "Project Settings - Project environment-Assertions"',
     use_error_report: 'Use error code',
-    use_desc:
-      'In case of conflict between error code and error assertions, it is treated as error code',
+    use_desc: 'In case of conflict between error code and error assertions, it is treated as error code',
     conflict_with_success: 'If request has error report and success assertion：',
     conflict_with_error: 'If request has error report and error assertion：',
     option: {

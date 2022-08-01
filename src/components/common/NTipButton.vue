@@ -24,15 +24,7 @@ const exec = () => {
 <template>
   <el-tooltip placement="bottom" :content="tip" :enterable="false" :effect="effect">
     <!-- <template #content> multiple lines<br />second line </template> -->
-    <el-button
-      circle
-      :plain="plain"
-      :disabled="disabled"
-      :type="type"
-      :icon="icon"
-      :size="size"
-      @click="exec"
-    />
+    <el-button circle :plain="plain" :disabled="disabled" :type="type" :icon="icon" :size="size" @click="exec" />
   </el-tooltip>
 </template>
 <style scoped lang="scss"></style>

@@ -516,8 +516,7 @@ export default {
       scenario_case: '场景用例'
     },
     sync_case_tips: '注意: 忽略后，受影响的用例将不再有提醒，请谨慎操作',
-    batch_sync_api_tips:
-      '注意: 批量同步，有可能部分不需要同步的用例参数也被覆盖，导致测试不通过，请谨慎操作',
+    batch_sync_api_tips: '注意: 批量同步，有可能部分不需要同步的用例参数也被覆盖，导致测试不通过，请谨慎操作',
     batch_ignore_case_tips: '注意: 批量忽略后，受影响的用例将不再有提醒，请谨慎操作'
   },
   display: {
@@ -590,8 +589,7 @@ export default {
     create: '创建工作空间',
     update: '修改工作空间',
     delete: '删除工作空间',
-    delete_confirm:
-      '删除该工作空间会关联删除该工作空间下的所有资源(如：相关项目，测试用例等），确定要删除吗?',
+    delete_confirm: '删除该工作空间会关联删除该工作空间下的所有资源(如：相关项目，测试用例等），确定要删除吗?',
     add: '添加工作空间',
     input_name: '请输入工作空间名称',
     search_by_name: '根据名称搜索',
@@ -654,8 +652,7 @@ export default {
     create: '创建组织',
     modify: '修改组织',
     delete: '删除组织',
-    delete_confirm:
-      '删除该组织会关联删除该组织下的所有资源(如：相关工作空间，项目，测试用例等），确定要删除吗?',
+    delete_confirm: '删除该组织会关联删除该组织下的所有资源(如：相关工作空间，项目，测试用例等），确定要删除吗?',
     input_name: '请输入组织名称',
     select_organization: '请选择组织',
     search_by_name: '根据名称搜索',
@@ -719,8 +716,7 @@ export default {
       zentao_info: '禅道信息',
       zentao_account: '禅道账户',
       zentao_password: '禅道密码',
-      zentao_prompt_information:
-        '该信息为通过禅道提交缺陷的的用户名、密码，若未填写，则使用工作空间中配置的默认信息',
+      zentao_prompt_information: '该信息为通过禅道提交缺陷的的用户名、密码，若未填写，则使用工作空间中配置的默认信息',
       zentao_config_tip: '参考禅道配置文件中 $config->requestType 的值 ',
       zentao_config_path: '配置文件参考路径：/opt/zbox/app/zentao/config/my.php',
       use_tip: '使用指引：',
@@ -728,8 +724,7 @@ export default {
       use_tip_jira:
         'Jira software server 认证信息为 账号密码，Jira software cloud 认证信息为 账号+令牌(账户设置-安全-创建API令牌)',
       use_tip_zentao: '账号密码为具有相应权限的Zentao账号，账号需要具有 超级model调用接口权限',
-      use_tip_two:
-        '保存 Basic Auth 账号信息后，需要在 MeterSphere 项目中手动关联 ID/key 和缺陷模板',
+      use_tip_two: '保存 Basic Auth 账号信息后，需要在 MeterSphere 项目中手动关联 ID/key 和缺陷模板',
       use_tip_three: '添加你的个人平台账号',
       link_the_project_now: '马上关联项目',
       link_the_info_now: '马上添加',
@@ -751,8 +746,7 @@ export default {
       input_azure_url: '请输入 Azure Devops 地址',
       input_azure_organization_id: '请输入 Azure 组织ID',
       use_tip_azure: 'Azure Devops 地址+令牌(账户设置-个人访问令牌-创建令牌)',
-      jira_prompt_information:
-        '该信息为通过Jira提交缺陷的用户认证信息，若未填写，则使用工作空间中配置的默认信息'
+      jira_prompt_information: '该信息为通过Jira提交缺陷的用户认证信息，若未填写，则使用工作空间中配置的默认信息'
     }
   },
   project: {
@@ -777,8 +771,7 @@ export default {
     azureDevops_id: 'AzureDevops项目ID',
     azureDevops_filter_id: 'AzureDevops过滤ID',
     azureDevops_info: 'AzureDevops 信息',
-    azureDevops_tip:
-      '该信息为通过Azure Devops提交缺陷的用户令牌信息，若未填写，则使用工作空间中配置的默认信息',
+    azureDevops_tip: '该信息为通过Azure Devops提交缺陷的用户令牌信息，若未填写，则使用工作空间中配置的默认信息',
     manager: '项目管理',
     group_permission: '用户组与权限',
     global: '全局',
@@ -855,8 +848,7 @@ export default {
       delete_tip: '此版本已经关联系统资源，此操作会将所关联的资源一并删除',
       checkout: '切换',
       compare: '对比',
-      change_latest_tip:
-        '此操作会修改接口，场景，测试用例等列表页面的默认展示，可能会消耗一些时间。请耐心等待！'
+      change_latest_tip: '此操作会修改接口，场景，测试用例等列表页面的默认展示，可能会消耗一些时间。请耐心等待！'
     },
     timing_clean_plan_report: '定时清理测试计划报告',
     timing_clean_api_report: '定时清理接口测试报告',
@@ -884,8 +876,7 @@ export default {
     repeat_password: '确认密码',
     inconsistent_passwords: '两次输入的密码不一致',
     remove_member: '确定要移除该成员吗',
-    org_remove_member:
-      '将该用户从组织中移除，将同时移除该组织下所有工作空间的权限，确定要移除该成员吗？',
+    org_remove_member: '将该用户从组织中移除，将同时移除该组织下所有工作空间的权限，确定要移除该成员吗？',
     input_id_or_email: '请输入用户 ID, 或者 用户邮箱',
     input_id_or_email_or_name: '请输入用户 ID, 用户名, 或者 用户邮箱',
     no_such_user: '无此用户信息, 请输入正确的用户 ID 或者 用户邮箱！'
@@ -1074,8 +1065,7 @@ export default {
     ramp_up_tips: 'RampUp 过大，图表渲染卡顿不予展示，这并不影响测试执行，请以实际结果为准',
     iterate_num: '迭代次数',
     by_iteration: '按迭代次数',
-    by_iteration_tip:
-      '按迭代次数执行需要配置执行时长，JMeter会按照迭代次数和执行时长来决定是否结束测试',
+    by_iteration_tip: '按迭代次数执行需要配置执行时长，JMeter会按照迭代次数和执行时长来决定是否结束测试',
     by_duration: '按持续时间',
     ramp_up_time_times: '次增加并发用户',
     advanced_config_error: '高级配置校验失败',
@@ -1466,8 +1456,7 @@ export default {
       save_case_info: '请先保存用例',
       reference_deleted: '引用已删除',
       loop_name: '循环',
-      loop_content:
-        '默认为开启，当循环下只有一个请求时，可以开启/关闭;当循环下超过一个请求时，则只能开启。',
+      loop_content: '默认为开启，当循环下只有一个请求时，可以开启/关闭;当循环下超过一个请求时，则只能开启。',
       loop_return_val: '定义变量名称',
       loop_input_val: '变量前缀',
       loop_message: '当前循环下超过一个请求，不能关闭状态',
@@ -2412,8 +2401,7 @@ export default {
       create_report: '创建测试报告',
       view_report: '查看测试报告',
       component_library: '组件库',
-      component_library_tip:
-        '拖拽组件库中组件，添加至右侧，预览报告效果，每个系统组件只能添加一个。',
+      component_library_tip: '拖拽组件库中组件，添加至右侧，预览报告效果，每个系统组件只能添加一个。',
       delete_component_tip: '请至少保留一个组件',
       input_template_name: '输入模版名称',
       template_special_characters: '模版名称不支持特殊字符',
@@ -2429,8 +2417,7 @@ export default {
       share_report: '分享报告',
       no_case_relevance: '没有关联用例',
       automatically_update_status: '自动更新状态',
-      automatically_update_status_tip:
-        '当功能用例关联的接口或性能用例在测试计划执行后，自动更新功能用例的状态',
+      automatically_update_status_tip: '当功能用例关联的接口或性能用例在测试计划执行后，自动更新功能用例的状态',
       allow_associated_repetitive_cases: '允许关联重复用例',
       allow_associated_repetitive_cases_tip: '是否允许同一个测试计划中多次关联相同用例',
       performance_case_count: '性能测试用例数',

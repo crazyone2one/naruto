@@ -31,26 +31,18 @@ const state = reactive({
         <el-icon class="icon account"><location /></el-icon>
         <span>{{ $t('commons.system') }}</span>
       </template>
-      <el-menu-item
-        v-for="menu in state.systems"
-        :key="menu.index"
-        :index="menu.index"
-        class="setting-item"
-        >{{ $t(menu.title) }}</el-menu-item
-      >
+      <el-menu-item v-for="menu in state.systems" :key="menu.index" :index="menu.index" class="setting-item">{{
+        $t(menu.title)
+      }}</el-menu-item>
     </el-sub-menu>
     <el-sub-menu index="2">
       <template #title>
         <el-icon class="icon account"><location /></el-icon>
         <span>{{ $t('commons.workspace') }}</span>
       </template>
-      <el-menu-item
-        v-for="menu in state.workspaces"
-        :key="menu.index"
-        :index="menu.index"
-        class="setting-item"
-        >{{ $t(menu.title) }}</el-menu-item
-      >
+      <el-menu-item v-for="menu in state.workspaces" :key="menu.index" :index="menu.index" class="setting-item">{{
+        $t(menu.title)
+      }}</el-menu-item>
     </el-sub-menu>
   </el-menu>
 </template>

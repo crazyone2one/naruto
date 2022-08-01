@@ -19,8 +19,7 @@ export default {
             title: 'commons.setting',
             permission: true
           },
-          component: () =>
-            import(/* webpackChunkName: "SettingHome" */ '@/views/settings/SettingHome.vue')
+          component: () => import(/* webpackChunkName: "SettingHome" */ '@/views/settings/SettingHome.vue')
         },
         {
           path: 'systemworkspace',
@@ -30,10 +29,7 @@ export default {
             system: true,
             permission: true
           },
-          component: () =>
-            import(
-              /* webpackChunkName: "workspace" */ '@/views/settings/system/SystemWorkspace.vue'
-            )
+          component: () => import(/* webpackChunkName: "workspace" */ '@/views/settings/system/SystemWorkspace.vue')
         },
         {
           path: 'user',
@@ -43,8 +39,7 @@ export default {
             system: true,
             permission: true
           },
-          component: () =>
-            import(/* webpackChunkName: "workspace" */ '@/views/settings/system/SystemUser.vue')
+          component: () => import(/* webpackChunkName: "workspace" */ '@/views/settings/system/SystemUser.vue')
         },
         {
           path: 'project/:type',
@@ -54,10 +49,7 @@ export default {
             workspace: true,
             permission: true
           },
-          component: () =>
-            import(
-              /* webpackChunkName: "workspace" */ '@/views/settings/workspace/SystemProject.vue'
-            )
+          component: () => import(/* webpackChunkName: "workspace" */ '@/views/settings/workspace/SystemProject.vue')
         }
       ]
     }

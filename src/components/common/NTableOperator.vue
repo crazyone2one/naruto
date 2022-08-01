@@ -26,13 +26,7 @@ const deleteClick = () => {
 <template>
   <span>
     <slot name="front" />
-    <n-table-operator-button
-      v-if="showEdit"
-      :tip="tip1"
-      icon="edit"
-      :disabled="isShow"
-      @exec="editClick"
-    />
+    <n-table-operator-button v-if="showEdit" :tip="tip1" icon="edit" :disabled="isShow" @exec="editClick" />
     <slot name="middle" />
     <n-table-operator-button
       v-if="showDelete"

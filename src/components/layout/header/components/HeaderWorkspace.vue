@@ -35,14 +35,10 @@ const initData = () => {
   userWorkspaceList(state.currentUserId).then(response => {
     state.workspaceList = response.data
     state.wsListCopy = response.data
-    const workspace = response.data.filter(
-      (r: Workspace.WorkspaceItem) => r.id === getCurrentWorkspaceId()
-    )
+    const workspace = response.data.filter((r: Workspace.WorkspaceItem) => r.id === getCurrentWorkspaceId())
     if (workspace.length > 0) {
       state.currentWorkspaceName = workspace[0].name
-      state.workspaceList = response.data.filter(
-        (r: Workspace.WorkspaceItem) => r.id !== getCurrentWorkspaceId()
-      )
+      state.workspaceList = response.data.filter((r: Workspace.WorkspaceItem) => r.id !== getCurrentWorkspaceId())
       state.workspaceList.unshift(workspace[0])
     }
   })
@@ -65,11 +61,7 @@ onMounted(() => {
             class="search-input"
           />
           <div class="dropdown-content">
-            <el-dropdown-item
-              v-for="(item, index) in state.workspaceList"
-              :key="index"
-              :command="item"
-            >
+            <el-dropdown-item v-for="(item, index) in state.workspaceList" :key="index" :command="item">
               {{ item.name }}
               <el-icon v-if="getCurrentWorkspaceId() === item.id"><Check /></el-icon>
             </el-dropdown-item>

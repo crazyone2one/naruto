@@ -11,9 +11,7 @@ import { loginApi } from '@/api/modules/login'
 const userInfo = useUserInfo()
 const router = useRouter()
 const loginRules = reactive({
-  name: [
-    { required: true, message: i18n.global.t('commons.input_login_username'), trigger: 'blur' }
-  ],
+  name: [{ required: true, message: i18n.global.t('commons.input_login_username'), trigger: 'blur' }],
   password: [{ required: true, message: i18n.global.t('commons.input_password'), trigger: 'blur' }]
 })
 const loginForm = reactive<Login.ReqLoginForm>({
