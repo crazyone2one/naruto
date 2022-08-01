@@ -12,10 +12,8 @@ const logout = () => {
     type: 'warning'
   }).then(() => {
     router.push({ name: 'login' })
-    userInfo.setToken('')
-    userInfo.setLastProjectId('')
-    userInfo.setLastWorkspaceId('')
-    userInfo.setUserInfo({})
+    // 清空缓存信息
+    userInfo.$reset()
     ElMessage({
       type: 'success',
       message: '退出登录成功！'
