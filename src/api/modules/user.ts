@@ -14,3 +14,7 @@ export const userGroupList = (userId: string) => {
 export const getGroupByType = (param: any) => {
   return http.post<any>('/group/get', param)
 }
+
+export const updateCurrentProject = (params: { id: string; lastProjectId: string | null }) => {
+  return http.post<User.ResUser>('/user/update/current', params)
+}

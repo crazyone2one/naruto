@@ -29,3 +29,7 @@ export const getMemberList = (wsId: string | null, params: Workspace.ReqMemberLi
 export const saveProject = (saveType: string, params?: Project.ProjectItem) => {
   return http.post<Project.ProjectItem>('/project/' + saveType, params)
 }
+
+export const relatedList = (params: { userId: string; workspaceId: string | null }) => {
+  return http.post<any>('/project/list/related', params)
+}
