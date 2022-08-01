@@ -20,3 +20,12 @@ export const projectPageList = (params: Project.ReqGetParams) => {
 export const getMemberList = (wsId: string | null, params: Workspace.ReqMemberListParams) => {
   return http.post<any>('/user/ws/project/member/list/' + wsId + '/1/100000', params)
 }
+/**
+ * 保存项目数据
+ * @param saveType 保存方式 ：add 添加，update 更新
+ * @param params
+ * @returns
+ */
+export const saveProject = (saveType: string, params?: Project.ProjectItem) => {
+  return http.post<Project.ProjectItem>('/project/' + saveType, params)
+}

@@ -44,3 +44,7 @@ export const userWorkspaceList = (userId: string) => {
 export const getMemberList = (params: Workspace.ReqMemberListParams) => {
   return http.post<any>('/user/special/ws/member/list/all', params)
 }
+
+export const resourceList = (id: string, type: string) => {
+  return http.get<any>('/workspace/list/resource/' + id + '/' + type)
+}

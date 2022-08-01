@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, onMounted, ref, computed } from 'vue'
+import { reactive, onMounted, ref, computed, watch } from 'vue'
 import { Project } from '@/api/interface'
 import { projectPageList, getMemberList } from '@/api/modules/project'
 import { getCurrentWorkspaceId, getCurrentProjectId } from '@/utils/common'
@@ -17,6 +17,7 @@ const state = reactive({
   loading: false,
   condition: {
     name: '',
+    workspaceId: '' as any,
     page: 1,
     limit: 15
   },
@@ -36,9 +37,14 @@ const projectId = computed(() => {
 const workspaceId = computed(() => {
   return getCurrentWorkspaceId()
 })
+
+watch(workspaceId, () => {
+  initTable()
+})
 // 初始化列表
 const initTable = async () => {
   // state.loading = true
+  state.condition.workspaceId = workspaceId
   await projectPageList(state.condition).then(response => {
     const data: Project.ResProject = response.data
     state.tableData.data = data.records
@@ -58,8 +64,8 @@ const initTable = async () => {
 const editProjectRef = ref()
 // add
 const create = () => {
-  const workspaceId = getCurrentWorkspaceId()
-  if (!workspaceId) {
+  // const workspaceId = getCurrentWorkspaceId()
+  if (!workspaceId.value) {
     ElMessage.warning(i18n.global.t('project.please_choose_workspace'))
     return false
   }
@@ -118,23 +124,14 @@ const handleDeleteMember = (row: any) => {}
         </div>
       </template>
       <el-table ref="userTable" :data="state.tableData.data" style="width: 100%">
-        <el-table-column
-          prop="name"
-          :label="$t('commons.name')"
-          min-width="100"
-          show-overflow-tooltip
-        >
+        <el-table-column prop="name" :label="$t('commons.name')" min-width="100" show-overflow-tooltip>
           <template #default="scope">
             <el-link type="primary" class="member-size" @click="jumpPage(scope.row)">
               {{ scope.row.name }}
             </el-link>
           </template>
         </el-table-column>
-        <el-table-column
-          prop="description"
-          :label="$t('commons.description')"
-          show-overflow-tooltip
-        />
+        <el-table-column prop="description" :label="$t('commons.description')" show-overflow-tooltip />
         <el-table-column :label="$t('commons.member')">
           <template #default="scope">
             <el-link type="primary" class="member-size" @click="cellClick(scope.row)">
@@ -142,11 +139,7 @@ const handleDeleteMember = (row: any) => {}
             </el-link>
           </template>
         </el-table-column>
-        <el-table-column
-          prop="createUser"
-          :label="$t('commons.create_user')"
-          show-overflow-tooltip
-        ></el-table-column>
+        <el-table-column prop="createUser" :label="$t('commons.create_user')" show-overflow-tooltip></el-table-column>
         <el-table-column
           min-width="100"
           sortable
@@ -185,16 +178,11 @@ const handleDeleteMember = (row: any) => {}
         :handle-size-change="handleSizeChange"
       />
     </el-card>
-    <edit-project ref="editProjectRef" />
+    <edit-project ref="editProjectRef" @reload="initTable" />
     <n-delete-confirm ref="deleteConfirm" :title="$t('project.delete')" @delete="_handleDelete" />
 
     <!-- member -->
-    <el-dialog
-      v-model="memberDialog"
-      :close-on-click-modal="false"
-      width="70%"
-      :destroy-on-close="true"
-    >
+    <el-dialog v-model="memberDialog" :close-on-click-modal="false" width="70%" :destroy-on-close="true">
       <template #header>
         <el-button :icon="Search" circle />
         <el-button type="primary" :icon="FolderAdd" circle />

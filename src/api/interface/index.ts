@@ -73,12 +73,13 @@ export namespace Workspace {
 export namespace Project {
   export interface ReqGetParams extends ReqPage {
     name: string
+    workspaceId: string
   }
 
   export interface ProjectItem {
     id: string
     projectId: any
-    workspaceId: string
+    workspaceId: string | null
     name: string
     description: string
     createTime: string
@@ -140,4 +141,24 @@ export namespace Login {
     token: string
     user: User.ResUser
   }
+}
+export interface Group {
+  id: string
+  name: string
+  description: string
+  system: boolean
+  type: string
+  createTime: string
+  updateTime: string
+  creator: string
+  scopeId: string
+  resourceId: any
+  projectId: any
+  onlyQueryCurrentProject: boolean
+  userGroupId: any
+  scopeName: any
+  memberSize: any
+  types: any[]
+  scopes: any[]
+  permissions: any
 }
